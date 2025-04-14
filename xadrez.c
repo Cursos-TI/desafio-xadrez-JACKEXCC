@@ -4,6 +4,30 @@
 // Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
+//movimentacao do torre
+
+void torre(int casa) {
+  if (casa > 0) {
+      printf("direita\n");  // Imprime o valor atual de n
+      torre(casa - 1);  // Chama a si mesma com n - 1
+  }
+}
+
+void bispo(int c) {
+  if (c > 0) {
+      printf("cima/direita\n");  // Imprime o valor atual de n
+      bispo(c - 1);  // Chama a si mesma com n - 1
+  }
+}
+
+void rainha(int R) {
+  if (R > 0) {
+     printf("esquerda\n ");  // Imprime o valor atual de n
+      rainha(R - 1);  // Chama a si mesma com n - 1
+  }
+}
+
+
 int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
@@ -27,48 +51,42 @@ int main() {
 
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
+     
+    torre(5);
+    bispo(5);
+    rainha(8);
 
-  int torre = 0;
-  int bispo = 0;
-  int rainha = 0;
-  int cavalo = 1;
+//movimento cavalo
 
-//movimentacao do torre
+   int cavalo = 1;
 
-  while (torre <= 5)
-  {
-  printf("torre direita\n", torre);
-  torre++;
-}
-
- //movimentacao do bispo
-do {
-   printf("bispo cima/direita\n", bispo);
-   bispo++;
-} while (bispo <= 5); 
-
-//movimentacao da rainha 
-for (int rainha = 0; rainha <= 8; rainha++)
-{
-   printf("rainha esquerda\n", rainha);
-}   
-
-// movimento do cavalo 
 while (cavalo--)
 {
-  for (int passo = 0; passo < 2; passo++)
-  {
-    printf("cavalo cima\n");
-  }
-  printf("cavalo direita\n");
+ for (int passo = 0; passo < 2; passo++)
+ {
+ printf("cavalo cima\n");
+ }
+ printf("cavalo direita\n");
 }
 
+int M = 8;
 
-
+   
+for (int vertical = 5; vertical <= M; vertical++) {
+   for (int horizontal = 5; horizontal <= vertical; horizontal++) {
+       printf("bispo/horizontal\n");
+   }
+   printf("bispo/vertical\n");
+}
 
 
 
 return 0;
+
+ 
+
+
+
 
 }
 

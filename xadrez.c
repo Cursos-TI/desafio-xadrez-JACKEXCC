@@ -8,24 +8,27 @@
 
 void torre(int casa) {
   if (casa > 0) {
-      printf("direita\n");  // Imprime o valor atual de n
-      torre(casa - 1);  // Chama a si mesma com n - 1
+      printf("direita\n");  
+      torre(casa - 1);  
   }
 }
 
+//movimento do bispo
 void bispo(int c) {
   if (c > 0) {
-      printf("cima/direita\n");  // Imprime o valor atual de n
-      bispo(c - 1);  // Chama a si mesma com n - 1
+      printf("cima/direita\n");  
+      bispo(c - 1);  
   }
 }
 
+//movimento rainha
 void rainha(int R) {
   if (R > 0) {
-     printf("esquerda\n ");  // Imprime o valor atual de n
-      rainha(R - 1);  // Chama a si mesma com n - 1
+     printf("esquerda\n ");  
+     rainha(R - 1);  
+   }
   }
-}
+
 
 
 int main() {
@@ -69,6 +72,7 @@ while (cavalo--)
  printf("cavalo direita\n");
 }
 
+// movimento bispo horizontal e vertical
 int M = 8;
 
    

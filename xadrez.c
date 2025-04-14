@@ -31,6 +31,7 @@ int main() {
   int torre = 0;
   int bispo = 0;
   int rainha = 0;
+  int cavalo = 1;
 
 //movimentacao do torre
 
@@ -51,6 +52,17 @@ for (int rainha = 0; rainha <= 8; rainha++)
 {
    printf("rainha esquerda\n", rainha);
 }   
+
+// movimento do cavalo 
+while (cavalo--)
+{
+  for (int passo = 0; passo < 2; passo++)
+  {
+    printf("cavalo cima\n");
+  }
+  printf("cavalo direita\n");
+}
+
 
 
 
